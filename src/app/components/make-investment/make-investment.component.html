@@ -1,0 +1,39 @@
+<form [formGroup]="investmentForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="assetType">Asset Type:</label>
+    <select formControlName="assetType">
+      <option value="Stocks">Stocks</option>
+      <option value="Bonds">Bonds</option>
+      <option value="Real Estate">Real Estate</option>
+    </select>
+    <p *ngIf="investmentForm.get('assetType')?.invalid && (investmentForm.get('assetType')?.touched || investmentForm.get('assetType')?.dirty)">
+      Please select an asset type.
+    </p>
+  </div>
+
+  <div>
+    <label for="quantity">Quantity:</label>
+    <input type="number" formControlName="quantity" required>
+    <p *ngIf="investmentForm.get('quantity')?.invalid && (investmentForm.get('quantity')?.touched || investmentForm.get('quantity')?.dirty)">
+      Quantity must be at least 1.
+    </p>
+  </div>
+
+  <div>
+    <label for="purchasePrice">Purchase Price:</label>
+    <input type="number" formControlName="purchasePrice" required>
+    <p *ngIf="investmentForm.get('purchasePrice')?.invalid && (investmentForm.get('purchasePrice')?.touched || investmentForm.get('purchasePrice')?.dirty)">
+      Purchase Price must be a positive number.
+    </p>
+  </div>
+
+  <div>
+    <label for="purchaseDate">Purchase Date:</label>
+    <input type="date" formControlName="purchaseDate" required>
+    <p *ngIf="investmentForm.get('purchaseDate')?.invalid && (investmentForm.get('purchaseDate')?.touched || investmentForm.get('purchaseDate')?.dirty)">
+      Please select a purchase date.
+    </p>
+  </div>
+
+  <button type="submit" [disabled]="investmentForm.invalid" class="make-investment-button">Make Investment</button>
+</form>

@@ -1,0 +1,19 @@
+<div class="dashboard">
+  <div class="profile-summary-container">
+    <div class="one">
+      <app-pofile-summary></app-pofile-summary>
+    </div>
+    <div class="two">
+      <button (click)="openInvestmentForm()" class="make-investment-button">Make Investment</button>
+    </div>
+  </div>
+
+  <div class="metrics-container">
+    <div class="left">
+      <app-asset-collection></app-asset-collection>
+    </div>
+    <div class="right">
+      <app-perfomance-metric></app-perfomance-metric>
+    </div>
+  </div>
+</div>

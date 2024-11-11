@@ -1,0 +1,39 @@
+.profile-summary {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333; /* Dark gray for the title */
+    font-family: 'Arial', sans-serif; /* Clean font */
+  }
+  
+  .summary-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: linear-gradient(to bottom, #f9f9f9, #e0e0e0); /* Light gray gradient */
+    border-radius: 5px; /* Slightly rounded corners */
+    border: 1px solid #b0b0b0; /* Medium gray border */
+  }
+  
+  .summary-box p {
+    font-size: 18px; /* Increased font size for readability */
+    margin: 10px 0;
+    color: #555; /* Medium gray text color */
+  }
+  
+  .value {
+    font-weight: bold; /* Bold font for values */
+    color: #007BFF; /* Blue color for values to stand out */
+  }
+  
+  strong {
+    color: #333; /* Dark gray for labels */
+  }
+  
